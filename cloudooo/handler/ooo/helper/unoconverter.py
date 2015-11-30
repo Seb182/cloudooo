@@ -114,6 +114,10 @@ class UnoConverter(object):
                                 (PropertyValue('Format', 0, 2, 0),),), 0)
     elif filter_name == "Text (encoded)":
       property = PropertyValue('FilterFlags', 0, 'UTF8,LF', 0)
+    elif filter_name == "writer_pdf_Export":
+      property = PropertyValue('FilterData', 0,
+                       uno.Any('[]com.sun.star.beans.PropertyValue',
+                       (PropertyValue('IsSkipEmptyPages', 0, True, 0),),), 0)  
     else:
       return []
 
