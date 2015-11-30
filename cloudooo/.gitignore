@@ -4,4 +4,3 @@ dist
 *.egg-info
 *.egg/*
 build/
-/nbproject/private/
